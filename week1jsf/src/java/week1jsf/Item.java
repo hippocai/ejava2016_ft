@@ -29,7 +29,7 @@ public class Item {
 		this.quantity = quantity;
 	}
 
-	public String addToCart() {
+	public void addToCart() {
 		System.out.println(">> name: " + name);
 		System.out.println(">> quantity: " + quantity);
 
@@ -37,12 +37,13 @@ public class Item {
 			FacesMessage msg = new FacesMessage("Quantity must be greater than 0");
 			FacesContext.getCurrentInstance()
 					.addMessage("orderForm:quantity", msg);
-			return (null);
+			return;
+			//return (null);
 		}
 
 		cart.addItem(createCopy());
 
-		return ("thankyou?faces-redirect=true");
+		//return ("thankyou?faces-redirect=true");
 	}
 
 	public Item createCopy() {

@@ -6,19 +6,21 @@
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-		<h:form id="orderForm">
 
+		<h:form id="cartForm">
 			<h:panelGrid columns="3">
 
 				Name: <h:inputText value="#{item.name}"/> <h:panelGroup/>
 
-				Quantity: <h:inputText value="#{item.quantity}" id="quantity"/>
+				Quantity: <h:inputText value="#{item.quantity}" id="quantity"
+						   converterMessage="Must be a positive number"/>
 				<h:message for="quantity"/>
 
-				<h:commandButton value="Add" action="#{item.addToCart()}"/>
-				<h:commandButton value="Register for newsletters" action="register"/>
-			</h:panelGrid>
+				<h:panelGroup/>
+				<h:commandButton value="Add to Cart" action="#{item.addToCart()}"/>
 
+			</h:panelGrid>
+			<h:commandButton value="Register for Newsletter" action="register"/>
 		</h:form>
     </h:body>
 </html>

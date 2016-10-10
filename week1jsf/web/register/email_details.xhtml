@@ -6,7 +6,23 @@
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-		<h1>Thank you. We will be in contact with you shortly</h1>
+		<h1>Please enter your emali</h1>
+
+		<h:form>
+
+			Name:
+			<h:outputText value="#{registerBean.name}"/>
+			<br/>
+
+			Email: 
+			<h:inputText value="#{registerBean.email}"/>
+
+			<br/>
+
+			<h:commandButton value="Previous" action="register"/>
+			<h:commandButton value="Register" action="#{registerBean.registerMe()}"/>
+
+		</h:form>
     </h:body>
 </html>
 

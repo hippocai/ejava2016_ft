@@ -7,18 +7,22 @@
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-		<h1>Items in your cart</h1>
+		<h1>You have purchase #{item.quantity} units of #{item.name}</h1>
 
 		<h:dataTable var="i" value="#{cart.items}">
 
 			<h:column>
-				<f:facet name="header"> Name </f:facet>
+				<f:facet name="header">
+					<h:outputText value="Name"/>
+				</f:facet>
 				<h:outputText value="#{i.name}"/>
 			</h:column>
 
 			<h:column>
-				<f:facet name="header"> Quantity </f:facet>
-				<f:facet name="footer"> 
+				<f:facet name="header">
+					<h:outputText value="Quantity"/>
+				</f:facet>
+				<f:facet name="footer">
 					<h:outputText value="#{cart.getItems().size()}"/>
 				</f:facet>
 				<h:outputText value="#{i.quantity}"/>
@@ -27,10 +31,8 @@
 		</h:dataTable>
 
 		<h:form>
-			<h:commandButton value="Back" action="index"/>
+			<h:commandLink value="Back" action="index"/>
 		</h:form>
-
-
     </h:body>
 </html>
 

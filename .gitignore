@@ -1,4 +1,9 @@
 build/
 dist/
 /WebApplication1/nbproject/private/
+<<<<<<< HEAD
 /week1jsf/nbproject/private/
+=======
+/week1jsf/nbproject/private/
+/week02/nbproject/private/
+>>>>>>> new_branch

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+	  xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+		<h1>Shopping Cart</h1>
+
+		<h:form id="cartForm">
+			Item:
+			<h:inputText value="#{shoppingCart.newItem}"/>
+			<h:commandButton value="Add to cart" action="#{shoppingCart.addToCart()}">
+				<f:ajax execute="@form" render="@form"/>
+			</h:commandButton>
+
+			<h:dataTable var="i" value="#{shoppingCart.cart}">
+				<h:column>
+					<h:outputText value="#{i}"/>
+				</h:column>
+			</h:dataTable>
+			<h:commandButton value="Send to Warehouse" action="#{shoppingCart.deliver()}"/>
+		</h:form>
+
+    </h:body>
+</html>
+

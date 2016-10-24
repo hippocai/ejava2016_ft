@@ -1,9 +1,7 @@
 build/
 dist/
+bower_components/
 /WebApplication1/nbproject/private/
-<<<<<<< HEAD
-/week1jsf/nbproject/private/
-=======
 /week1jsf/nbproject/private/
 /week02/nbproject/private/
->>>>>>> new_branch
+

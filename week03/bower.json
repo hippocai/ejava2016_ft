@@ -1,0 +1,15 @@
+{
+  "name": "day01",
+  "version": "1.0.0",
+  "main": "path/to/main.css",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
+  "dependencies": {
+    "angularjs": "1.5.8",
+    "angular": "angularjs#^1.5.8",
+    "bootstrap": "^3.3.7"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TODO supply a title</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- load libs -->
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+		<!-- load app -->
+		<script src="chat.js"></script>
+	</head>
+	<body>
+		<div class="container">
+
+			<h1>Chat</h1>
+
+			<form>
+				<div class="form-group">
+					<label for="chatarea">Chats:</label>
+					<textarea id="chatarea" rows="10" disabled class="form-control"></textarea>
+				</div>
+
+				<div class="form-group">
+					<label for="message">Message:</label>
+					<div class="input-group">
+						<input id="message" type="text" placeholder="Your message"
+							   class="form-control">
+						<div class="input-group-btn">
+							<button class="btn btn-warning" type="button" id="sendBtn">
+								Send
+							</button>
+						</div>
+					</div>
+				</div>
+
+			</form>
+
+		</div>
+	</body>
+</html>
